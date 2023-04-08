@@ -1,0 +1,178 @@
+header{
+    width: 100%;
+    position:fixed ;
+    z-index: 200;
+    padding: 0px 70px;
+    background-image: url(../../assats/Capture.PNG);
+    opacity: 0;
+    animation: app .5s 1s  forwards;
+    transform: translateY(-20px);
+}
+@keyframes app {
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+.container ul{
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+header a{
+    color: #11325c;
+    padding: 12px 10px;
+}
+li .line{
+    margin-right: 10px;
+}
+li .line::before{
+position: absolute;
+content: "";
+width: 2px;
+height: 50px;
+background-color:#11325c;
+margin: -10px -15px;
+}
+.btn{
+    background-color: #11325c;
+    color: white;
+    border-radius: 15px;
+    transition: 0.1s;
+    padding: 10px 20px;
+}
+.btn:hover{
+    box-shadow: 0px 0px 10px 0px #11325c;
+    border-bottom: 0 !important;
+}
+header .container a:hover,
+header .container a.active{
+    border-bottom: 3px solid var(--main_color);
+    width: 100%;
+}
+
+.logo svg{
+    flex: 1;
+    width: 120px;
+    height: 120px;
+}
+.list a::after,.sub_list a::after{
+    position: absolute;
+    content: '+';
+    font-size: 1.3rem;
+}
+.list:hover a::after,.sub_list:hover a::after{
+    content: '-';
+    color: var(--main_color);
+}
+.list div{
+    display: none;
+}
+.list:hover div{ 
+    display:block;
+}
+.sub_list div{
+    display: none;
+}
+.sub_list:hover div{ 
+    display:block;
+}
+@media (max-width:1115px) {
+    header{
+        padding: 0px 0px;
+    }
+}
+
+@media(max-width:830px){
+    header .container {
+        justify-content: center;
+        height: 120px;
+        flex-direction: column;
+        width: 100%;
+        margin-top: -20px;
+    }
+    nav{
+        margin-top: -20px;
+    }
+    .container ul{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    header a{
+        color: #11325c;
+        padding: 0px 15px;
+    }
+    li .line::before{
+    height: 20px;
+    margin: 0px -15px;
+    }
+
+    .logo svg{
+        flex: 0;
+        width: 100px;
+        height: 100px;
+    }
+    .list a::after,.sub_list a::after{
+        font-size: 1rem;
+    }
+}
+@media (max-width:600px) {
+    .btn{
+        padding: 7px 10px;
+        font-size: .7rem;
+    }
+}
+@media (max-width:535px) {
+    .btn{
+        display: none;
+    }
+}
+@media (max-width:450px) {
+    .btn{
+        display: none;
+    }
+
+    .container ul{
+        font-size: .8rem;
+    }
+    header a{
+        color: #11325c;
+        padding: 0px 15px;
+    }
+    li .line::before{
+    height: 20px;
+    margin: 0px -10px;
+    }
+
+    .logo svg{
+        flex: 0;
+        width: 90px;
+        height: 90px;
+    }
+    .list a::after,.sub_list a::after{
+        font-size: .8rem;
+    }
+}
+@media (max-width:385px) {
+    .btn{
+        display: none;
+    }
+.container{
+    width: 100%;
+}
+    .container ul{
+        font-size: .6rem;
+    }
+}
+
+
+

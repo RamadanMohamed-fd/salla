@@ -1,0 +1,154 @@
+.content{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 360px;
+    margin-bottom: 70px;
+}
+@media (max-width:482px) {
+  .content{
+    margin-top: 390px;
+  }
+}
+.circle{
+    padding: 20px;
+    width:280px;
+    height: 220px;
+    box-shadow: 7px 7px 7px 1px #aaa;
+    background-image: url(../../assats/Capture.PNG);
+    border-radius:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    transform-origin: left bottom;
+    transform: translate(-300px) rotate(-90deg);
+    animation: m .8s ease-in-out forwards;
+}
+@keyframes m {
+    100%{
+        opacity: 1;
+        transform: translate(0px) rotate(0deg);
+    }
+}
+.icon{
+    color:var(--main_color);
+    font-size: 3.9rem;
+    width: 100%;
+    opacity: 0;
+    transform-origin: left bottom;
+    transform: translate(-300px);
+    animation: mm .8s .8s ease-in-out forwards;
+}
+@keyframes mm {
+    100%{
+        opacity: 1;
+        transform: translate(0px) ;
+    }
+}
+.circle p{
+    font-size: 1.5rem;
+    margin-top: -40px;
+    opacity: 0;
+    transform-origin: left bottom;
+    transform: translate(-300px);
+    animation: mm .8s 1s ease-in-out forwards;
+    color: #aaa;
+}
+.circle h2{
+    font-size: 3rem;
+    color: var(--sub_color);
+    opacity: 0;
+    transform-origin: left bottom;
+    transform: translate(-300px);
+    animation: mm .8s 1.2s ease-in-out forwards;
+}
+
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  .c{
+    animation: counter 1s 2.2s alternate ease-in-out forwards;
+    counter-reset: num var(--num);
+  }
+  .c1 {
+    animation: counter1 1s 2.2s alternate ease-in-out forwards;
+    counter-reset: num var(--num);
+  }
+  span::after {
+    content: counter(num);
+  }
+  
+  @keyframes counter1 {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 14;
+    }
+  }
+  @keyframes counter {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 36;
+    }
+  }
+@media (max-width:815px) {
+    .circle{
+        width: 200px;
+        height: 180px;
+        padding: 10px;
+    }
+    .icon{
+        color: #11325c;
+        font-size: 3rem;
+    }
+    .circle p{
+        font-size: 1.2rem;
+    }
+    .circle h2{
+        font-size: 2rem;
+    }
+}
+@media (max-width:530px) {
+    .circle{
+        width: 150px;
+        height: 120px;
+        padding: 5px;
+        gap: 10px;
+    }
+    .icon{
+        font-size: 2rem;
+    }
+    .circle p{
+        font-size: .7rem;
+    }
+    .circle h2{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:430px) {
+  .content{
+    width: 95%;
+  }
+}
+@media (max-width:380px) {
+  .icon{
+    font-size: 1.8rem;
+}
+.circle p{
+    font-size: .7rem;
+}
+.circle h2{
+    font-size: 1.5rem;
+}
+}

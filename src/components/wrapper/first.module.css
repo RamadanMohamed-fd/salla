@@ -1,0 +1,62 @@
+.section__first{
+    position: absolute;
+    margin-top: 230px;
+    width: 100%;
+}
+@media screen and (max-width: 1023px){
+.section__inner {
+    flex-direction: column-reverse;
+}}
+.section__inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.section_lines_desktop__vertical_line {
+    position: absolute;
+    left: 50%;
+    width: 6px;
+top: -10px;
+    background-color: #dd133f;
+    mask-image: url(../../assats/vertical-line-mask.png);
+    mask-size: 6px 1500px;
+    mask-mode: alpha;
+    mask-repeat: repeat-y;
+    mask-position: top center;
+    z-index: 10;
+}
+.vl{
+    top: 60px;
+ 
+}
+.vr{
+    top: 60px;
+}
+.section_lines_desktop__horizontal_line {
+    position: absolute;
+    top: 0;
+    height: 6px;
+    top: 60px;
+    background-color: #dd133f;
+    mask-image: url(../../assats/horizontal-line-mask.png);
+    mask-position: bottom right;
+    mask-size: 1500px 6px;
+    mask-mode: alpha;
+    mask-repeat: repeat-x;
+    z-index: 10;
+}
+
+@media (max-width:720px) {
+    .section_lines_desktop__horizontal_line{
+        width: 60%;
+    } 
+}
+@media (max-width:482px) {
+    .section__first{
+        margin-top: 260px;
+    }
+}

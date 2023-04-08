@@ -1,0 +1,59 @@
+.container{
+width: 90%;
+display: flex;
+height: 60px;
+margin: auto;
+flex-wrap: wrap;
+
+}
+.h_line{
+    width: 100%;
+    position: relative;
+    margin-top: -10px;
+    height: 6px;
+    background-color: #dd133f;
+    mask-image: url(../../assats/horizontal-line-mask.png);
+    mask-size: 1000px 6px;
+}
+.content{
+ width: 100%;
+ height: fit-content;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ margin: auto;
+
+}
+.r_content{
+    color: #11325c;
+    font-size: 1.2rem;
+    margin: 10px;
+}
+.l_content{
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 1.2rem;
+color: #11325c;
+column-gap: 20px;
+flex-wrap: wrap;
+}
+.l_content .image{
+    width: 60px;
+    margin-left: -20px;
+}
+.phone,.addres,.mail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+@media (max-width:1115px) {
+    .container{
+        width: 99%;
+    }
+    .r_content,.l_content{
+        font-size: 1rem;
+    }
+}

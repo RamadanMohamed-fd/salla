@@ -1,0 +1,133 @@
+.content{
+    position: relative;
+    display: flex;
+    box-shadow: 5px 5px 7px 0px var(--sub_color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.content:hover{
+   transform: scale(1.05 ); 
+}
+.circle{
+    padding: 10px;
+    width:240px;
+    background-color: white;
+    border-radius:20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 1;
+}
+.icon{
+    color:#11325c;
+    width: 60px;
+    height: 60px;
+    background-color: #eee;
+    padding: 10px;
+    opacity: 0;
+    transform-origin: left bottom;
+    transform: translate(-200px);
+    animation: mm .8s  ease-in-out forwards;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: inset 0px 0px 10px 0px #11325c;
+}
+@keyframes mm {
+    100%{
+        opacity: 1;
+        transform: translate(0px) ;
+    }
+}
+.circle p{
+    font-size: 1rem;
+    margin-top: -20px;
+    opacity: 0;
+    transform-origin: left bottom;
+    transform: translate(-200px);
+    animation: mm .8s .5s ease-in-out forwards;
+    color: #aaa;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.circle h2{
+    font-size: 1.7rem;
+    color: #11325c;
+    opacity: 0;
+    transform-origin: left bottom;
+    transform: translate(-200px);
+    animation: mm .8s .7s ease-in-out forwards;
+}
+@media (max-width:1115px) {
+    .circle{
+        width: 200px;
+    }
+    .icon{
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+    }
+    .circle p{
+        font-size: 1rem;
+    }
+    .circle h2{
+        font-size: 1.2rem;
+    }
+}
+@media (max-width:660px) {
+    .content{
+        height: 180px ;
+    }
+    .circle{
+        width: 180px;
+        height: 180px;
+    }
+}
+@media (max-width:636px) {
+    .content{
+        height: 130px ;
+    }
+    .circle{
+        width: 140px;
+        height: 130px;
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+    .circle p{
+        font-size: .5rem;
+        margin-top: -25px;
+    }
+    .circle h2{
+        font-size: .8rem;
+    }
+}
+@media (max-width:450px) {
+    .content{
+        height: 120px ;
+        margin-top: 5px;
+    }
+    .circle{
+        width: 120px;
+        height: 120px;
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+    .circle p{
+        font-size: .5rem;
+        margin-top: -25px;
+    }
+    .circle h2{
+        font-size: .8rem;
+    }
+}

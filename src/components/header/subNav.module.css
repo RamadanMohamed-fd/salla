@@ -1,0 +1,57 @@
+.container{
+position: absolute;
+  background-image: url(../../assats/Capture.PNG);
+  margin-top: 12px;
+}
+.content{
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 5px;
+    margin: 5px;
+}
+.content:hover{
+background-color: white;
+transform: translateX(-2px);
+}
+.icon{
+    font-size: 1.7rem;
+    color:var(--sub_color);
+    padding: 2px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.text h3{
+    font-size: 1rem;
+    color: var(--sub_color);
+}
+.text p{
+    font-size: .8rem;
+    color: var(--sub_color);
+}
+@media(max-width:830px){
+    .container{
+          margin-top: 5px;
+          margin-right: 20px;
+          z-index: 20;
+        }
+        .icon{
+            font-size: 1.3rem;
+            color:var(--sub_color);
+        }
+        .text h3{
+            font-size: .8rem;
+        }
+        .text p{
+            font-size: .7rem;
+        }    
+}

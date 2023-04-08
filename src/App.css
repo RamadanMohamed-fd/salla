@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&family=Noto+Nastaliq+Urdu&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+:root {
+  --main_color: #dd133f;
+  --sub_color: #11325c;
+}
+body {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+ul {
+  list-style: none;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+}
+.burn_mask{  
+  width: 100%;
+  height: fit-content;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  mask-image: url(./assats/burn-mask.png);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 0;
+  animation: mask 2s  1 forwards;
+  z-index: 0;
+}
+@keyframes mask {
+  100%{
+    mask-size: 150%;
+  }
+}
+.btn{
+  background-color: #11325c;
+  color: white;
+  border-radius: 15px;
+  transition: 0.1s;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.btn:hover{
+  box-shadow: 0px 0px 10px 0px #11325c;
+  border-bottom: 0 !important;
+}
+.btn_1{
+  transform: translateX(-400px);
+  animation: ltor 1s 1s linear forwards;
+  opacity: 0;
+}
+@keyframes ltor {
+  100%{
+      opacity: 1;
+      transform:  translateX(0px);
+  }
+}
+.btn_2{
+  transform: translateX(400px);
+  animation: ltor 1s 1s linear forwards;
+  opacity: 0;
+}
+@keyframes ltor {
+  100%{
+      opacity: 1;
+      transform:  translateX(0px);
+  }
+}
+@media (max-width:480px) {
+  .btn{
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+}
+.first{
+  width: 100%;
+  margin-top: -360px;
+  height: 100vh;
+}
+
+.item1{
+  width: 100%;
+   gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 250px;
+  margin-bottom: 50px;
+}
+@media (max-width:850px) {
+  .item1{
+    margin-top: 180px;
+    column-gap: 20px;
+  }
+}
+
+
+.title2,.title3,.title4,.title5{
+  width: 100%;
+  display: flex;
+}
+.title2{
+  margin-top: 0px;
+  justify-content: space-evenly;
+  background-image:url(./images/Capture.PNG) ;
+  padding: 20;
+  height: 125vh;
+}
+.title3{
+  margin-top: 0px;
+  justify-content: flex-end;
+  background-color: white;
+  height: 115vh;
+}
+.title4{
+  margin-top: 10px;
+  justify-content: flex-end;
+  background-image:url(./images/Capture.PNG) ;
+  height: 80vh;
+}
+.title5{
+  margin-top: 10px;
+  justify-content: center;
+  text-align: center;
+  height: 70vh;
+}

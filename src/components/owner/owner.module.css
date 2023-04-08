@@ -1,0 +1,134 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding: 50px;
+    margin: 70px auto;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 10px #eee;
+    width: 70%;
+    transform: translate(-300px);
+    opacity: 0;
+    transform-origin: left bottom;
+    animation: m .8s ease-in-out forwards;
+}
+@keyframes m {
+    100%{
+        opacity: 1;
+        transform: translate(0px) ;
+    }
+}
+.container h2{
+    font-size: 3rem;
+    color: #dd133f;
+    opacity: 0;
+    transform-origin: left bottom;
+    animation: mm .8s .8s ease-in-out forwards;
+    transform: translate(-300px) ;
+}
+@keyframes mm {
+    100%{
+        opacity: 1;
+        transform: translate(0px) ;
+    }
+}
+.container p{
+    width: 70%;
+    font-size: 1.7rem;
+    color: #11325c;
+    margin: auto;
+    opacity: 0;
+    transform-origin: left bottom;
+    animation: m .8s 1.2s ease-in-out forwards;
+    transform: translate(-300px) ;
+}
+.button{
+    margin: auto;
+    font-size: 1.8rem;
+    color: white;
+    background-color: var(--sub_color);
+    padding: 10px 20px;
+    border:1px solid var(--sub_color);
+    margin-top: 20px;
+    border-radius: 15px;
+    opacity: 0;
+    transform-origin: left bottom;
+    animation: mm .8s 1.4s ease-in-out forwards;
+    transform: translate(-300px) ;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.button:hover{
+    box-shadow: 0px 0px 10px 0px var(--sub_color);
+    border-bottom: 0 !important;
+}
+
+@media (max-width:910px) {
+    .container{
+        width: 80%;
+    }
+    .container h2{
+        font-size: 2.8rem;
+        margin-top: 10px;
+    }
+    .container p{
+        width: 80%;
+    }
+}
+@media (max-width:710px) {
+    .container{
+        width:90%;
+    }
+    .container h2{
+        font-size: 2.4rem;
+    }
+    .container p{
+        width: 100%;
+        font-size: 1.4rem;
+    }
+}
+@media (max-width:561px) {
+    .container h2{
+        font-size: 2rem;
+    }
+    .container p{
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    .button{
+        font-size: 1.4rem;
+    }
+}
+@media (max-width:492px) {
+    .container{
+        padding: 40px;
+        height: 300px;
+    }
+    .container h2{
+        font-size: 1.4rem;
+    }
+    .container p{
+        font-size: 1rem;
+    }
+    .button{
+        font-size: 1.1rem;
+    }
+}
+@media (max-width:360px) {
+    .container{
+        padding: 30px;
+    }
+    .container h2{
+        font-size: 1.3rem;
+    }
+    .container p{
+        font-size: 1rem;
+    }
+    .button{
+        font-size: 1rem;
+    }
+}
+
+
